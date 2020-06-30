@@ -22,18 +22,31 @@
     
 // });
 
-window.addEventListener('scroll',function(){
+// window.addEventListener('scroll',function(){
 
-    var scroll = window.pageYOffset;
-    console.log(scroll);
-    var n=0;
-    while(n<8){
-        if (scroll>40+10*n&&scroll<40+20*n){
-        document.getElementsByClassName('box')[n].style.visibility='visible'}
-        n++;
-        } 
-});
+//     var scroll = window.pageYOffset;
+//     console.log(scroll);
+//     var n=0;
+//     while(n<8){
+//         if (scroll>40+10*n&&scroll<40+20*n){
+//         document.getElementsByClassName('box')[n].style.visibility='visible'}
+//         n++;
+//         } 
+// });
 
+var n =0;
+
+function color_change(){
+    while(n<4){
+    
+    var col1 = document.getElementsByClassName('box')[n].style.backgroundColor;
+    var col2 = document.getElementsByClassName('box')[7-n].style.backgroundColor;
+    document.getElementsByClassName('box')[n].style.backgroundColor = col2;
+    document.getElementsByClassName('box')[7-n].style.backgroundColor = col1;
+    n++;
+    }
+
+};
 
 
 
